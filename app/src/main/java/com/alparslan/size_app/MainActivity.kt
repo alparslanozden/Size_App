@@ -1,14 +1,16 @@
 package com.alparslan.size_app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val initialTextViewTranslationY = textView_progress.translationY
 
         seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
@@ -34,11 +36,9 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        button_reset
         button_reset.setOnClickListener { v ->
             seekBar.progress = 0
         }
     }
 }
-    }
-}
+
